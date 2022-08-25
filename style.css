@@ -1,0 +1,368 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+.lightMode {
+  --bg-grad-background: linear-gradient(180deg, #48b4e0 , #228b22 60%)fixed; 
+}
+
+.darkMode {
+  --bg-grad-background: linear-gradient(180deg, #1d4d60 , #1c3f1c 60%)fixed; 
+}
+
+.hide {
+  display: none;
+}
+
+body {
+  font-size: 1.6rem;
+  background: var(--bg-grad-background);
+  background-repeat: no-repeat;
+}
+
+header {
+  margin: auto;
+  width: 1350px;
+  padding: 0 2rem 0;
+}
+
+.container img {
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+  top: 4rem;
+  right: 49%;
+}
+
+.aCloud {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.animals {
+  margin: auto;
+  margin-top: 3rem;
+  width: 1350px;
+  padding: 0 2rem 0;
+  display: grid;
+  grid-template-areas: 
+  "A B C D E"
+  "F G G H H"
+  "I J K L L";
+}
+
+img {
+  width: 15rem;
+  height: 15rem;
+}
+
+.treeOwlZebra,
+.treeLion,
+.treeGiraffe {
+  width: 25rem;
+  height: 38rem;
+}
+
+.treeBird,
+.treeMonkey {
+  width: 20rem;
+  height: 38rem;
+}
+
+.bear,
+.hipoppotamus {
+  width: 20rem;
+  height: 25rem;
+}
+
+.lakeElephantDuck,
+.frogHorse,
+.cow,
+.stoneSnake,
+.sheepPig {
+  width: 20rem;
+  height: 25rem;
+}
+
+.treeBird {
+  grid-area: A;
+}
+
+.treeGiraffe {
+  grid-area: B;
+}
+
+.treeMonkey {
+  grid-area: C;
+}
+
+.treeOwlZebra {
+  grid-area: D;
+}
+
+.treeLion {
+  grid-area: E;
+}
+
+.bear {
+  height: 15rem;
+  grid-area: F;
+}
+
+.lakeElephantDuck {
+  margin-left: 5rem;
+  grid-area: G;
+}
+
+.frogHorse {
+  grid-area: H;
+}
+
+.cow {
+  grid-area: I;
+}
+
+.stoneSnake {
+  margin-left: 5rem;
+  grid-area: J;
+}
+
+.hipoppotamus {
+  grid-area: K;
+  
+}
+
+.sheepPig {
+  display: flex;
+  margin-left: 3rem;
+  grid-area: L;
+  padding-left: 6rem;
+}
+
+#tree {
+  width: 20rem;
+  height: 30rem;
+}
+
+.container:active,
+#bird:active,
+#giraffe:active,
+#monkey:active,
+#owl:active,
+#zebra:active,
+#lion:active,
+#bear:active,
+#duck:active,
+#elephant:active,
+#frog:active,
+#horse:active,
+#hipoppotamus:active,
+#cow:active,
+#snake:active,
+#sheep:active,
+#pig:active {
+  cursor: pointer;
+}
+
+#bird, #owl, #duck {
+  width: 10rem;
+  height: 10rem;
+  transform: translateY(-200%);
+  margin-left: 5rem;
+}
+
+#giraffe, #lion {
+  margin-left: 12rem;
+  transform: translateY(-90%);
+}
+
+#zebra {
+  transform: translateY(-140%);
+  margin-left: 10rem;
+}
+
+#giraffe {
+  height: 20rem;
+  width: 15rem;
+}
+
+#monkey {
+  transform: translateY(-90%);
+  margin-left: 5rem;
+  width: 10rem;
+  height: 10rem;
+}
+
+#bear {
+  margin-left: 5rem;
+}
+
+#frog, #lake {
+  width: 45rem;
+  height: 15rem;
+}
+
+#duck {
+  transform: translateY(-130%); 
+  width: 8rem;
+}
+
+#elephant {
+  transform: translateY(-160%);
+  margin-left: 30rem;
+}
+
+#horse {
+  transform: translateY(-120%);
+  margin-left: 35rem;
+}
+
+#hipoppotamus {
+  margin-left: 5rem;
+}
+
+#cow {
+  width: 25rem;
+  height: 20rem;
+  
+}
+
+#stones {
+  width: 22rem;
+  height: 8rem;
+  transform: translateY(-80%);
+  display: block;
+}
+
+#snake, #sheep {
+  transform: translateY(-30%);
+}
+
+@media (max-width: 600px)  {
+  .animals {
+    align-items: center;
+    padding: 0 5rem 0;
+    grid-template-areas: 
+    "A C B"
+    "D J E"
+    "G G F"
+    "H H I"
+    "L L K";
+  }
+
+  header {
+    padding: 0 5rem 0;
+  }
+
+  .treeBird,
+  .treeGiraffe,
+  .treeLion,
+  .treeMonkey,
+  .treeOwlZebra,
+  .bear,
+  .lakeElephantDuck,
+  .frogHorse,
+  .hipoppotamus,
+  .cow,
+  .stoneSnake,
+  .sheepPig {
+    padding: 0 7rem 0;
+  }
+
+  .treeBird {
+    grid-area: A;
+  }
+  
+  .treeGiraffe {
+    margin-right: 5rem;
+    grid-area: B;
+  }
+  
+  .treeMonkey {
+    margin-left: 10rem;
+    grid-area: C; 
+    width: 18rem;
+  }
+  
+  .treeOwlZebra {
+    grid-area: D;
+  }
+  
+  .treeLion {
+    margin-right: 5rem;
+    grid-area: E;
+  }
+  
+  .bear {
+    height: 15rem;
+    grid-area: F;
+  }
+  
+  .lakeElephantDuck {
+    margin-left: 5rem;
+    grid-area: G;
+  }
+  
+  .frogHorse {
+    margin-top: 4rem;
+    grid-area: H;
+  }
+  
+  .hipoppotamus {
+    margin-right: 5rem;
+    margin-top: 5rem;
+    grid-area: I;
+    display: flex;
+    width: 18rem;
+  }
+  
+  .cow {
+    margin-top: 10rem;
+    margin-right: 8rem;
+    grid-area: J;
+  }
+  
+  .stoneSnake {
+    grid-area: K;
+  }
+  
+  .sheepPig {
+    grid-area: L;
+    display: flex;
+    gap: 7rem;
+  }
+
+  #sheep {
+    transform: translateY(0%);
+  }
+
+  #frog, #lake {
+    width: 50rem;
+    height: 15rem;
+  }
+
+  #elephant {
+    transform: translateY(-170%);
+    margin-left: 40rem;
+  }
+  
+  #horse {
+    transform: translateY(-120%);
+    margin-left: 50rem;
+  }
+}
+
+
+  
+
+
+
+
+
+
